@@ -18,5 +18,3 @@ def prime_factors(natural_number):
         if n > 2:
             primeFactor.append(n)
     return primeFactor
-
-prime_factors(9)
