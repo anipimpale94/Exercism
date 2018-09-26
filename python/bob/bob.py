@@ -1,9 +1,9 @@
 def hey(phrase):
-    preProcessedPhrase = phrase.strip()
-    if preProcessedPhrase == "":
+    preproccesed_phrase = phrase.strip()
+    if preproccesed_phrase == "":
         return "Fine. Be that way!"
-    if preProcessedPhrase.endswith('?'):
-        if preProcessedPhrase.isupper():
+    if preproccesed_phrase.endswith('?'):
+        if preproccesed_phrase.isupper():
             return "Calm down, I know what I'm doing!"
         else:
             return "Sure."
