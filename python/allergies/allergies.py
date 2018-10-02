@@ -13,21 +13,14 @@ class Allergies(object):
 
     def find_allergant(self, score):
         score = score % 256
-        allergant_list_index = []
-        index = 7
-        while score > 0:
-            if score & (1<<index):
-                allergant_list_index.append(self.allergant[index])
-                score -= 1<<index
-            index -= 1
-        return allergant_list_index
+        return [index for index in range(7,-1,-1) if score & (1<<index)]
     
     def __init__(self, score):
-        self.allergant_list = self.find_allergant(score)
+        self.allergant_list_index = self.find_allergant(score)
 
     def is_allergic_to(self, item):
-        return item in self.allergant_list
+        return [key for key, value in self.allergant.items() if value == item][0] in self.allergant_list_index
 
     @property
     def lst(self):
-        return self.allergant_list
+        return [self.allergant[item] for item in self.allergant_list_index]
