@@ -15,9 +15,7 @@ class Allergies(object):
         self.allergant_list = self.find_allergant(self.score)
 
     def is_allergic_to(self, item):
-        # return [key for key, value in self.allergant.items() if value == item][0] in self.allergant_list
         return bool(self.allergant_rev[item] & self.score)
-
 
     @property
     def lst(self):
