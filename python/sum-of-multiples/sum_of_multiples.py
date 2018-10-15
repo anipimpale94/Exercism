@@ -1,5 +1,5 @@
 def sum_of_multiples(limit, multiples):
-	#values = set()
+	values = set()
 	for item in multiples:
 		values.update(range(item, limit, item))
 
