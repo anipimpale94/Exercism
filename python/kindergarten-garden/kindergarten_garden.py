@@ -10,7 +10,7 @@ class Garden(object):
 
     def __init__(self, diagram, students=None):
         self.rows = diagram.split('\n')
-        if students != None:
+        if students is not None:
             students.sort()
             self.students = students
         for index, student in enumerate(self.students):
@@ -24,8 +24,4 @@ class Garden(object):
             self.plant_name[self.rows[1][2*i]],
             self.plant_name[self.rows[1][2*i+1]]
         ]
-
         return items
-
-garden = Garden("VCRRGVRG\nRVGCCGCV", students="Samantha Patricia Xander Roger".split())
-print(garden.plants("Patricia"))
