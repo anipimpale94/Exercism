@@ -1,7 +1,7 @@
 from functools import reduce
 
 class School(object):
-    
+
     def __init__(self):
         self.grade_dictionary = {}
 
@@ -13,5 +13,3 @@ class School(object):
 
     def grade(self, grade_number):
         return sorted(self.grade_dictionary[grade_number]) if grade_number in self.grade_dictionary else []
-
-
