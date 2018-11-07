@@ -17,9 +17,8 @@ main() {
   input=$1
 
   # Add your code here
-  echo $input
 }
 
 # Calls the main function passing all the arguments to it via '$@'
 # The argument is in quotes to prevent whitespace issues
-main "Hello, World!"
+main "$@"
