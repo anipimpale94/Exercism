@@ -1,5 +1,4 @@
 class SpaceAge(object):
-    days_per_year = 365.25
     seconds_per_year = 31557600
     def __init__(self, seconds):
         self.seconds = int(seconds)
@@ -9,7 +8,7 @@ class SpaceAge(object):
         return round((self.years_on_earth / 0.2408467), 2)
 
     def on_venus(self):
-        return round((self.years_on_earth / 0.61519726 ), 2)
+        return round((self.years_on_earth / 0.61519726), 2)
 
     def on_earth(self):
         return round((self.years_on_earth / 1), 2)
