@@ -1,4 +1,4 @@
-#!/bssin/bash
+#!/bin/bash
 main() {
  if [ -z "$1" ]; then
   echo Error: invalid input
